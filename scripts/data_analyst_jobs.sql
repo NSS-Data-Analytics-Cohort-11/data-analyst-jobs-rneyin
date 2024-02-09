@@ -86,7 +86,7 @@ AND title NOT ILIKE'%Analytics%';
 
 SELECT  domain, COUNT(title)
 FROM data_analyst_jobs
-WHERE skill = 'SQL'
+WHERE skill LIKE '%SQL%'
 AND days_since_posting >21
 AND domain IS NOT NULL
 GROUP BY domain
@@ -98,10 +98,10 @@ ORDER BY COUNT(title) DESC
 --   - Which three industries are in the top 4 on this list? Confusing question. . .
 -- answer:
 -- Top 3 Industries: 
+-- "Internet and Software"
+-- "Banks and Financial Services"
 -- "Consulting and Business Services"
--- "Consumer Goods and Services"
--- "Computers and Electronics"
--- 4th is "Internet and Software"
+-- "Health Care"
 
 -- How many jobs have been listed for more than 3 weeks for each of the top 4?
--- answer: 9 total
+-- answer:  232 total
