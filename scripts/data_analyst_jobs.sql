@@ -65,7 +65,7 @@ FROM data_analyst_jobs
 GROUP BY company
 HAVING SUM(review_count)>5000
 ORDER BY avg_rating DESC;
---answer: Google
+--answer: Google rating of 4.3
 
 
 -- 11.	Find all the job titles that contain the word ‘Analyst’. How many different job titles are there? 
@@ -79,7 +79,7 @@ SELECT DISTINCT(title)
 FROM data_analyst_jobs
 WHERE title NOT ILIKE '%Analyst%' 
 AND title NOT ILIKE'%Analytics%';
---answer: 26 if case matters (used LIKE),4 if case does not matter(used ILIKE)
+--answer: 26 if case matters (used LIKE),4 if case does not matter(used ILIKE). They're all Tableau related
 
 -- **BONUS:**
 -- You want to understand which jobs requiring SQL are hard to fill. Find the number of jobs by industry (domain) that require SQL and have been posted longer than 3 weeks. 
