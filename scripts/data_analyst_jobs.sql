@@ -87,7 +87,7 @@ AND title NOT ILIKE'%Analytics%';
 SELECT  domain, COUNT(title)
 FROM data_analyst_jobs
 WHERE skill = 'SQL'
-AND days_since_posting >27
+AND days_since_posting >21
 AND domain IS NOT NULL
 GROUP BY domain
 ORDER BY COUNT(title) DESC
